@@ -36,5 +36,6 @@ elecData2 = subset(elecData, (Date=="2007-02-01" | Date=="2007-02-02"))
 summary(elecData2)
 
 # Plot 1
+png('plot1.png')
 hist(elecData2$Global_active_power, col='red', main="Global Active Power", xlab="Global Active Power (kilowatts)")
-
+dev.off()

@@ -36,7 +36,9 @@ elecData2 = subset(elecData, (Date=="2007-02-01" | Date=="2007-02-02"))
 summary(elecData2)
 
 # Plot 3
+png('plot3.png')
 plot(elecData2$Time, elecData2$Sub_metering_1, type='l', xlab='', ylab='Energy sub metering')
 lines(elecData2$Time, elecData2$Sub_metering_2, col='red')
 lines(elecData2$Time, elecData2$Sub_metering_3, col='blue')
 legend("topright", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=c(1,1,1), lwd=c(2.5, 2.5, 2.5), col=c('black', 'red', 'blue'))
+dev.off()

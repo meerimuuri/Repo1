@@ -37,4 +37,6 @@ summary(elecData2)
 
 
 # Plot 2
+png('plot2.png')
 plot(elecData2$Time, elecData2$Global_active_power, type='l', xlab='', ylab="Global Active Power (kilowatts)")
+dev.off()

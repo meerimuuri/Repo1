@@ -37,6 +37,7 @@ summary(elecData2)
 
 
 # Plot 4
+png('plot4.png')
 par(mfrow=c(2,2))
 plot(elecData2$Time, elecData2$Global_active_power, type='l', xlab='', ylab="Global Active Power (kilowatts)")
 plot(elecData2$Time, elecData2$Voltage, type='l', ylab="Voltage", xlab='datetime')
@@ -46,3 +47,4 @@ lines(elecData2$Time, elecData2$Sub_metering_3, col='blue')
 legend("topright", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=c(1,1,1), lwd=c(2.5, 2.5, 2.5), bty='n', col=c('black', 'red', 'blue'))
 with(elecData2, plot(Time, Global_reactive_power, type='l', xlab='datetime'))
 par(mfrow=c(1,1))
+dev.off()
